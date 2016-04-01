@@ -1,0 +1,169 @@
+dynamixels: ['j_ankle2_l_position_controller', 'j_ankle1_l_position_controller', 'j_tibia_l_position_controller', 'j_thigh2_l_position_controller', 'j_thigh1_l_position_controller', 'j_pelvis_l_position_controller', 'j_ankle2_r_position_controller', 'j_ankle1_r_position_controller', 'j_tibia_r_position_controller', 'j_thigh2_r_position_controller', 'j_thigh1_r_position_controller', 'j_pelvis_r_position_controller']
+
+j_ankle2_l_position_controller:
+  controller:
+    package: dynamixel_controllers
+    module: joint_position_controller
+    type: JointPositionController
+  joint_name: j_ankle2_l
+  joint_speed: 1.0
+  motor:
+    id: 18
+    init: 2030
+    min: 1060
+    max: 3000
+
+j_ankle1_l_position_controller:
+  controller:
+    package: dynamixel_controllers
+    module: joint_position_controller
+    type: JointPositionController
+  joint_name: j_ankle1_l
+  joint_speed: 1.0
+  motor:
+    id: 16
+    init: 2030
+    min: 960
+    max: 2700
+
+j_tibia_l_position_controller:
+  controller:
+    package: dynamixel_controllers
+    module: joint_position_controller
+    type: JointPositionController
+  joint_name: j_tibia_l
+  joint_speed: 1.0
+  motor:
+    id: 14
+    init: 2160
+    min: 605
+    max: 2190
+
+j_thigh2_l_position_controller:
+  controller:
+    package: dynamixel_controllers
+    module: joint_position_controller
+    type: JointPositionController
+  joint_name: j_thigh2_l
+  joint_speed: 1.0
+  motor:
+    id: 12
+    init: 2060
+    min: 1790
+    max: 3060
+
+j_thigh1_l_position_controller:
+  controller:
+    package: dynamixel_controllers
+    module: joint_position_controller
+    type: JointPositionController
+  joint_name: j_thigh1_l
+  joint_speed: 1.0
+  motor:
+    id: 10
+    init: 2030
+    min: 1150
+    max: 2130
+
+j_pelvis_l_position_controller:
+  controller:
+    package: dynamixel_controllers
+    module: joint_position_controller
+    type: JointPositionController
+  joint_name: j_pelvis_l
+  joint_speed: 1.0
+  motor:
+    id: 8
+    init: 2000
+    min: 2550
+    max: 1650
+
+
+j_ankle2_r_position_controller:
+  controller:
+    package: dynamixel_controllers
+    module: joint_position_controller
+    type: JointPositionController
+  joint_name: j_ankle2_r_position
+  joint_speed: 1.0
+  motor:
+    id: 17
+    init: 2040
+    min: 1080
+    max: 3000
+
+j_ankle1_r_position_controller:
+  controller:
+    package: dynamixel_controllers
+    module: joint_position_controller
+    type: JointPositionController
+  joint_name: j_ankle1_r
+  joint_speed: 1.0
+  motor:
+    id: 15
+    init: 2070
+    min: 1500
+    max: 3135
+
+j_tibia_r_position_controller:
+  controller:
+    package: dynamixel_controllers
+    module: joint_position_controller
+    type: JointPositionController
+  joint_name: j_tibia_r
+  joint_speed: 1.0
+  motor:
+    id: 13
+    init: 1970
+    min: 1928
+    max: 3526
+
+j_thigh2_r_position_controller:
+  controller:
+    package: dynamixel_controllers
+    module: joint_position_controller
+    type: JointPositionController
+  joint_name: j_thigh2_r
+  joint_speed: 1.0
+  motor:
+    id: 11
+    init: 2030
+    min: 1010
+    max: 2320
+
+j_thigh1_r_position_controller:
+  controller:
+    package: dynamixel_controllers
+    module: joint_position_controller
+    type: JointPositionController
+  joint_name: j_thigh1_r
+  joint_speed: 1.0
+  motor:
+    id: 9
+    init: 2070
+    min: 1920
+    max: 2870
+
+j_pelvis_r_position_controller:
+  controller:
+    package: dynamixel_controllers
+    module: joint_position_controller
+    type: JointPositionController
+  joint_name: j_pelvis_r
+  joint_speed: 1.0
+  motor:
+    id: 7
+    init: 520
+    min: 350
+    max: 650
+
+
+darwin_leg_controller:
+  controller:
+    package: dynamixel_controllers
+    module: joint_trajectory_action_controller
+    type: JointTrajectoryActionController
+  joint_trajectory_action_node:
+    min_velocity: 0.1
+    constrains:
+      goal_time: 0.25

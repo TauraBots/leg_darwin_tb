@@ -1,0 +1,42 @@
+<!-- -*- mode: XML -*- -->
+<launch>
+    <!-- Start tilt and pan controller -->
+    <rosparam file="$(find leg_darwin_tb)/param/darwin_leg.yaml" command="load"/>
+    <node name="tilt_controller_spawner" pkg="dynamixel_controllers" type="controller_spawner.py"
+          args="--manager=dxl_manager
+                --port pan_tilt_port
+                j_ankle2_l_position_controller
+                j_ankle1_l_position_controller
+                j_tibia_l_position_controller
+                j_thigh2_l_position_controller
+                j_thigh1_l_position_controller
+                j_pelvis_l_position_controller
+                j_ankle2_r_position_controller
+                j_ankle1_r_position_controller
+                j_tibia_r_position_controller
+                j_thigh2_r_position_controller
+                j_thigh1_r_position_controller
+                j_pelvis_r_position_controller
+                "
+           output="screen"/>
+
+  <!-- Start joints trajectory controller controller -->
+    <rosparam file="$(find leg_darwin_tb)/param/darwin_leg.yaml" command="load"/>
+    <node name="controller_spawner_meta" pkg="dynamixel_controllers" type="controller_spawner.py"
+          args="--manager=dxl_manager
+                --type=meta
+                darwin_leg_controller
+                j_ankle2_l_position_controller
+                j_ankle1_l_position_controller
+                j_tibia_l_position_controller
+                j_thigh2_l_position_controller
+                j_thigh1_l_position_controller
+                j_pelvis_l_position_controller
+                j_ankle2_r_position_controller
+                j_ankle1_r_position_controller
+                j_tibia_r_position_controller
+                j_thigh2_r_position_controller
+                j_thigh1_r_position_controller
+                j_pelvis_r_position_controller
+                " output="screen" ns="/darwin" respawn="false"/>
+</launch>
