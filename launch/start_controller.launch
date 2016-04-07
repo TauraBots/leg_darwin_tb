@@ -25,7 +25,7 @@
     <!-- Start tilt and pan controller -->
     <rosparam ns="$(arg dynamixel_namespace)" file="$(find darwin_leg_tb)/param/darwin_leg.yaml" command="load"/>
 
-    <node ns="$(arg dynamixel_namespace)" name="lag_controller" pkg="dynamixel_controllers" type="controller_spawner.py"
+    <node ns="$(arg dynamixel_namespace)" name="leg_controller" pkg="dynamixel_controllers" type="controller_spawner.py"
           args="--manager=dxl_manager
                 --port dxl_port
                 j_ankle2_l_position_controller
